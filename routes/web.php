@@ -1,9 +1,12 @@
 <?php
 
-use App\Http\Controllers\HelloSatishController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HelloWorldController;
 use App\Http\Controllers\MyViewController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\AssignmentController;
+use App\Http\Controllers\HelloWorldController;
+use App\Http\Controllers\HelloSatishController;
+use App\Http\Controllers\AssignmentStatusController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -39,3 +42,10 @@ Route::get('/myview2', [MyViewController::class, 'myview2']);
 // login should show login page
 // register should show register page
 
+Route::resource('students', StudentController::class);
+Route::resource('assignments', AssignmentController::class);
+Route::resource('assignment-statuses', AssignmentStatusController::class);
+
+Route::get('assignments/{assignment}/student-statuses', [AssignmentController::class, 'studentStatuses'])->name('assignments.student-statuses');
+
+Route::get('students/{student}/assignments', [StudentController::class, 'showAssignments'])->name('students.assignments.show');
