@@ -27,7 +27,7 @@ class AssignmentStatusController extends Controller
         $request->validate([
             'student_id' => 'required|exists:students,id',
             'assignment_id' => 'required|exists:assignments,id',
-            'status' => 'required|in:pending,completed,overdue',
+            'status' => 'required|in:pending,completed,partial,overdue',
             'description' => 'nullable|string|max:255', // Validate the description
         ]);
 
@@ -48,7 +48,7 @@ class AssignmentStatusController extends Controller
         $request->validate([
             'student_id' => 'required|exists:students,id',
             'assignment_id' => 'required|exists:assignments,id',
-            'status' => 'required|in:pending,completed,overdue',
+            'status' => 'required|in:pending,completed,partial,overdue',
             'description' => 'nullable|string|max:255', // Validate the description
         ]);
 

@@ -31,6 +31,7 @@
         <select name="status" class="form-control" id="status" required>
             <option value="pending" {{ $assignmentStatus->status === 'pending' ? 'selected' : '' }}>Pending</option>
             <option value="completed" {{ $assignmentStatus->status === 'completed' ? 'selected' : '' }}>Completed</option>
+            <option value="partial" {{ $assignmentStatus->status === 'partial' ? 'selected' : '' }}>Partially Completed</option>
             <option value="overdue" {{ $assignmentStatus->status === 'overdue' ? 'selected' : '' }}>Overdue</option>
         </select>
     </div>

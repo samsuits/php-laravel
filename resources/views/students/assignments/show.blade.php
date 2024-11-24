@@ -17,7 +17,7 @@
                 <tr>
 
                     <td>{{ $assignment->assignment->title }}</td>
-                    <td class="{{ $assignment->status === 'completed' ? 'bg-complete' : 'bg-pending' }}">{{ $assignment->status }}</td>
+                    <td class="{{ $assignment->status === 'completed' ? 'bg-complete' : ($assignment->status === 'partial' ? 'bg-partial-complete' : 'bg-pending') }}">{{ $assignment->status }}</td>
                     <td>{{ $assignment->description }}</td>
                     <td>
                     <a href="{{ route('assignment-statuses.edit', $assignment->id) }}" class="btn btn-warning btn-sm">Edit</a>

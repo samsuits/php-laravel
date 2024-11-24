@@ -5,3 +5,7 @@
 .bg-pending {
     background-color: lightcoral;
 }
+
+.bg-partial-complete {
+    background-color: lightblue;
+}

@@ -28,6 +28,7 @@
         <select name="status" class="form-control" id="status" required>
             <option value="pending">Pending</option>
             <option value="completed">Completed</option>
+            <option value="partial">Partially Completed</option>
             <option value="overdue">Overdue</option>
         </select>
     </div>

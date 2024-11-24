@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('student_id')->constrained()->onDelete('cascade');
             $table->foreignId('assignment_id')->constrained()->onDelete('cascade');
-            $table->enum('status', ['pending', 'completed', 'overdue']);
+            $table->enum('status', ['pending', 'completed', 'partial', 'overdue']);
             $table->timestamps();
         });
     }

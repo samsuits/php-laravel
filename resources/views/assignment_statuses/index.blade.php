@@ -25,7 +25,7 @@
                 <td>{{ $status->id }}</td>
                 <td>{{ $status->student->name }}</td>
                 <td>{{ $status->assignment->title }}</td>
-                <td class="{{ $status->status === 'completed' ? 'bg-complete' : 'bg-pending' }}">{{ $status->status }}</td>
+                <td class="{{ $status->status === 'completed' ? 'bg-complete' : ($status->status === 'partial' ? 'bg-partial-complete' : 'bg-pending') }}">{{ $status->status }}</td>
                 <td title="{{ $status->description }}">
 
                     {{-- {{ $status->description }} --}}
