@@ -10,4 +10,14 @@ class HelloWorldController extends Controller
     {
         return 'Hello, World!';
     }
+
+    public function greet($name)
+    {
+        return 'Hello, ' . $name . '!';
+    }
+
+    public function sum($num1, $num2)
+    {
+        return $num1 + $num2;
+    }
 }
