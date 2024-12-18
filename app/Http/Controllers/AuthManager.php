@@ -64,6 +64,6 @@ class AuthManager extends Controller
     {
         Auth::logout();
 
-        return redirect('login');
+        return redirect(route('login'));
     }
 }
