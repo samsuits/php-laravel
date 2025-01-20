@@ -5,10 +5,16 @@
         <section>
             <div class="row">
                 @foreach ($products as $product)
-                    <div class="col-12 col-md-6 col-lg-4 mt-10" >
-                        <img src="{{ $product->image }}" alt="" style="width:150px">
-                        <p>{{ $product->title }}</p>
-                    </div>
+                    <article class="col-12 col-md-6 col-lg-3">
+                        <div class="card p-2 shadow-sm">
+                            <img src="{{ $product->image }}" alt="{{ $product->title }}" class="img-fluid">
+                            <div>
+                                <a href="{{ route('products.details', $product->slug) }}">{{ $product->title }}</a>
+                                | <span>&#8377; {{ $product->price }}
+                                </span>
+                            </div>
+                        </div>
+                    </article>
                 @endforeach
             </div>
         </section>
